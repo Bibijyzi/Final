@@ -2,24 +2,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    void Update()
+    [SerializeField] public int health;
+
+    private Rigidbody2D rb;
+    [SerializeField] public Collider2D collider;
+
+    private void Awake()
     {
-        DestroyEnemy();
+        rb = GetComponent<Rigidbody2D>();
+        collider = GetComponent<Collider2D>();
     }
 
-    void DestroyEnemy()
+    public void TakeDamage(int damage)
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector2 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Collider2D[] colliders = Physics2D.OverlapPointAll(clickPosition);
-            foreach (Collider2D collider in colliders)
-            {
-                if (collider.CompareTag("Enemy"))
-                {
-                    Destroy(collider.gameObject);
-                }
-            }
-        }
+        health -= damage;
+        if (health <= 0)
+            Destroy(gameObject);
     }
 }

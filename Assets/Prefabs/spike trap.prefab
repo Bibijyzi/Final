@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7948314827781291093}
   - component: {fileID: 5077679628156629484}
   - component: {fileID: 712222929679706758}
+  - component: {fileID: -117502067291885204}
   m_Layer: 0
   m_Name: spike trap
   m_TagString: Enemy
@@ -114,7 +115,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -281,3 +282,16 @@ PolygonCollider2D:
       - {x: 0.57, y: -2.8799999}
       - {x: 0.7, y: -2.84}
   m_UseDelaunayMesh: 0
+--- !u!114 &-117502067291885204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9200047498756044492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b267652a5363cea42a78ec9d21ecdb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
