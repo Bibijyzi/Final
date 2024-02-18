@@ -4,6 +4,9 @@ using UnityEngine.UI;
 public class ClickEnemy : MonoBehaviour
 {
     [SerializeField] private Text killEnemy;
+    [SerializeField] private ParticleSystem destroyEnemyVFX;
+    [SerializeField] private AudioClip estroyEnemySFX;
+    [SerializeField] private AudioSource source;
     private int counterKill;
 
     void Update()
@@ -27,5 +30,7 @@ public class ClickEnemy : MonoBehaviour
             }
         }
         killEnemy.text = "Объектов уничтожено: " + counterKill;
+        Instantiate(destroyEnemyVFX, clickPosition, Quaternion.identity);
+        source.PlayOneShot(estroyEnemySFX);
     }
 }
