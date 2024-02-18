@@ -298,6 +298,7 @@ MonoBehaviour:
   damage: 1
   damageSFX: {fileID: 8300000, guid: 6cad71c7c6dce6a41881b224aad19156, type: 3}
   source: {fileID: 7658766891111235861, guid: 1adb7948fe07f1247850f05879b833e0, type: 3}
+  hitVFX: {fileID: 426542839126018182, guid: 10462c4579ab46645a764ee111bff3a8, type: 3}
 --- !u!82 &-7726507144704925202
 AudioSource:
   m_ObjectHideFlags: 0
